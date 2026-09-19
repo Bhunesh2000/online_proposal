@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  background: #fff0f5;
+  font-family: "Inter", sans-serif;
+  color: #4a1030;
+  overscroll-behavior: none;
+}
+
+/* ===== Floating Hearts Animation ===== */
+.heart {
+  position: fixed;
+  font-size: 1.5rem;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatUp linear infinite;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  95% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(720deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* ===== Sparkle Effect ===== */
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd700 0%, transparent 70%);
+  pointer-events: none;
+  animation: sparkleAnim 2s ease-in-out infinite;
+}
+
+@keyframes sparkleAnim {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== Gradient Text — dark rose/burgundy for readability ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #881337, #9f1239, #be123c, #9f1239);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ===== Button Glow ===== */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-glow:hover::before,
+.btn-glow:active::before {
+  opacity: 1;
+}
+
+/* ===== Pulse Border — green for YES ===== */
+.pulse-border-green {
+  animation: pulseBorderGreen 2s ease-in-out infinite;
+}
+
+@keyframes pulseBorderGreen {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+}
+
+/* ===== Pulse Border — red for NO ===== */
+.pulse-border-red {
+  animation: pulseBorderRed 2s ease-in-out infinite;
+}
+
+@keyframes pulseBorderRed {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+}
+
+/* ===== Pulse Border — pink for CTA ===== */
+.pulse-border-pink {
+  animation: pulseBorderPink 2s ease-in-out infinite;
+}
+
+@keyframes pulseBorderPink {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(236, 72, 153, 0);
+  }
+}
+
+/* ===== Photo Frame ===== */
+.photo-frame {
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 40px rgba(244, 114, 182, 0.15);
+  overflow: hidden;
+}
+
+/* ===== Backdrop Blur ===== */
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ===== Ambient Glow Background — soft baby pink ===== */
+.ambient-bg {
+  background: linear-gradient(
+    135deg,
+    #fce4ec 0%,
+    #fdf2f8 25%,
+    #fff0f5 50%,
+    #fdf2f8 75%,
+    #fce4ec 100%
+  );
+  background-size: 400% 400%;
+  animation: ambientShift 8s ease-in-out infinite;
+}
+
+@keyframes ambientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ===== Landing Screen — romantic light pink gradient ===== */
+.landing-bg {
+  background: linear-gradient(
+    135deg,
+    #fdf2f8 0%,
+    #fce4ec 20%,
+    #fbcfe8 40%,
+    #fce4ec 60%,
+    #fdf2f8 80%,
+    #fff1f2 100%
+  );
+  background-size: 400% 400%;
+  animation: landingShift 10s ease-in-out infinite;
+}
+
+@keyframes landingShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+}
+
+/* ===== Final Screen — warm celebration pink ===== */
+.final-bg {
+  background: linear-gradient(
+    135deg,
+    #fdf2f8 0%,
+    #fce4ec 20%,
+    #fbcfe8 40%,
+    #f9a8d4 50%,
+    #fbcfe8 60%,
+    #fce4ec 80%,
+    #fdf2f8 100%
+  );
+  background-size: 400% 400%;
+  animation: finalShift 6s ease-in-out infinite;
+}
+
+@keyframes finalShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ===== Scrollbar Hide ===== */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
