@@ -50,4 +50,4 @@ export const SCREEN_IMAGES: Record<number, string> = {
   7: "/assets/7.PNG",
 };
 
-export const FINAL_IMAGE = "/assets/final.PNG";
+export const FINAL_IMAGE = "/assets/final.png";
