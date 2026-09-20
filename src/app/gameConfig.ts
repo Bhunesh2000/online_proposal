@@ -41,13 +41,13 @@ export const POPUP_TEXTS = {
 
 // 🖼️ Image paths — these map to files in /public/assets/
 export const SCREEN_IMAGES: Record<number, string> = {
-  1: "/assets/1.jpeg",
-  2: "/assets/2.png",
-  3: "/assets/3.png",
-  4: "/assets/4.png",
-  5: "/assets/5.png",
-  6: "/assets/6.png",
-  7: "/assets/7.png",
+  1: "/assets/1.JPEG",
+  2: "/assets/2.PNG",
+  3: "/assets/3.PNG",
+  4: "/assets/4.PNG",
+  5: "/assets/5.PNG",
+  6: "/assets/6.PNG",
+  7: "/assets/7.PNG",
 };
 
-export const FINAL_IMAGE = "/assets/final.png";
+export const FINAL_IMAGE = "/assets/final.PNG";
