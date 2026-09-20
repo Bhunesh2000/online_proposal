@@ -76,7 +76,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              A little game before we begin... 🎮
+              Let me show you a trailer to help you decide if you want to watch the full movie!! 🎬
             </motion.p>
 
             {/* CTA Button */}

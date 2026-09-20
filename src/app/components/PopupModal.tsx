@@ -60,7 +60,7 @@ export default function PopupModal({
               whileTap={{ scale: 0.97 }}
               onClick={onClose}
             >
-              Okay, got it! 😊
+              Acha ji!! 😊
             </motion.button>
           </motion.div>
         </motion.div>

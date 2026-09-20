@@ -102,7 +102,7 @@ export default function FinalScreen() {
           animate={{ opacity: 1 }}
           transition={{ delay: 2, duration: 1 }}
         >
-          ✨ Here&apos;s to us and everything ahead ✨
+          ✨ Long drive pe chale, meri passenger princess 👸?? ✨
         </motion.p>
       </div>
     </motion.div>

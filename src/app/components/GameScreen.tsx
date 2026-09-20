@@ -96,7 +96,7 @@ export default function GameScreen({
           <img
             src={imageSrc}
             alt={`Screen ${screenNumber}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </motion.div>
 
